@@ -2,4 +2,4 @@
 title: The Webamboos Guidebook
 ---
 
-Work in progress...
+> This document is a work in progress.
