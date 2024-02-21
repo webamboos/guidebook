@@ -7,10 +7,54 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      "webamboos.com": "https://webamboos.com",
+      GitHub: "https://github.com/webamboos",
+      LinkedIn: "https://linkedin.com/company/webamboos",
+      Facebook: "https://www.facebook.com/webamboos",
+      Instagram: "https://www.instagram.com/webamboos",
     },
   }),
+}
+
+function explorer () {
+  return Component.Explorer({
+    sortFn(a, b) {
+      const nameOrderMap: Record<string, number> = {
+        "mindset": 100,
+
+        "fundamentals": 200,
+        "the-web": 201,
+        "the-url": 202,
+        "javascript": 203,
+        "development-environment": 204,
+        "package-management": 205,
+        
+        "backend": 300,
+        "frontend": 400,
+        "advanced": 500,
+        "best-practices": 600,
+        "resources": 700,
+        "the-company": 800,
+      }
+   
+      let orderA = 0
+      let orderB = 0
+   
+      if (a.file && a.file.slug) {
+        orderA = nameOrderMap[a.file.slug] || nameOrderMap[a.name] || 0
+      } else if (a.name) {
+        orderA = nameOrderMap[a.name] || 0
+      }
+   
+      if (b.file && b.file.slug) {
+        orderB = nameOrderMap[b.file.slug] || nameOrderMap[b.name] || 0
+      } else if (b.name) {
+        orderB = nameOrderMap[b.name] || 0
+      }
+   
+      return orderA - orderB
+    }
+  })
 }
 
 // components for pages that display a single page (e.g. a single note)
@@ -26,7 +70,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(explorer()),
   ],
   right: [
     Component.Graph(),
@@ -43,7 +87,7 @@ export const defaultListPageLayout: PageLayout = {
     Component.MobileOnly(Component.Spacer()),
     Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.DesktopOnly(explorer()),
   ],
   right: [],
 }
