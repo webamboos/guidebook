@@ -8,21 +8,19 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "The Guidebook",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: null,
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
-    ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "created",
+    baseUrl: "guidebook.webamboos.com",
+    ignorePatterns: ["private", "templates", ".obsidian", "docs"],
+    defaultDateType: "modified",
     theme: {
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
+        header: "Playfair Display",
+        body: "Inter",
         code: "IBM Plex Mono",
       },
       colors: {
@@ -53,7 +51,9 @@ const config: QuartzConfig = {
     transformers: [
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
-        priority: ["frontmatter", "filesystem"],
+        // you can add 'git' here for last modified from Git
+        // if you do rely on git for dates, ensure defaultDateType is 'modified'
+        priority: ["frontmatter", "filesystem", "git"],
       }),
       Plugin.Latex({ renderEngine: "katex" }),
       Plugin.SyntaxHighlighting({
