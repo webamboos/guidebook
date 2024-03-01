@@ -19,8 +19,8 @@ const config: QuartzConfig = {
     theme: {
       cdnCaching: true,
       typography: {
-        header: "Noto Sans Display",
-        body: "Noto Serif",
+        header: "Onest",
+        body: "Onest",
         code: "IBM Plex Mono",
       },
       colors: {

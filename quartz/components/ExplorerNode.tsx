@@ -188,7 +188,9 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
             // Node with entire folder
             // Render svg button + folder name, then children
             <div class="folder-container">
-              <svg
+              <svg class="folder-icon closed" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 256"><g fill="currentColor"><path d="M128 80H32V56a8 8 0 0 1 8-8h52.69a8 8 0 0 1 5.65 2.34Z" opacity={0.2}></path><path d="M216 72h-84.69L104 44.69A15.86 15.86 0 0 0 92.69 40H40a16 16 0 0 0-16 16v144.62A15.4 15.4 0 0 0 39.38 216h177.51A15.13 15.13 0 0 0 232 200.89V88a16 16 0 0 0-16-16M92.69 56l16 16H40V56ZM216 200H40V88h176Z"></path></g></svg>
+              <svg class="folder-icon open" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 256"><g fill="currentColor"><path d="M208 88v24H69.77a8 8 0 0 0-7.59 5.47L32 208V64a8 8 0 0 1 8-8h53.33a8 8 0 0 1 4.8 1.6l27.74 20.8a8 8 0 0 0 4.8 1.6H200a8 8 0 0 1 8 8" opacity={0.2}></path><path d="M245 110.64a16 16 0 0 0-13-6.64h-16V88a16 16 0 0 0-16-16h-69.33l-27.73-20.8a16.14 16.14 0 0 0-9.6-3.2H40a16 16 0 0 0-16 16v144a8 8 0 0 0 8 8h179.1a8 8 0 0 0 7.59-5.47l28.49-85.47a16.05 16.05 0 0 0-2.18-14.42M93.34 64l27.73 20.8a16.12 16.12 0 0 0 9.6 3.2H200v16H69.77a16 16 0 0 0-15.18 10.94L40 158.7V64Zm112 136H43.1l26.67-80H232Z"></path></g></svg>
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="12"
                 height="12"
@@ -201,7 +203,7 @@ export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodePro
                 class="folder-icon"
               >
                 <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+              </svg> */}
               {/* render <a> tag if folderBehavior is "link", otherwise render <button> with collapse click event */}
               <div key={node.name} data-folderpath={folderPath}>
                 {folderBehavior === "link" ? (
