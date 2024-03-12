@@ -1,3 +1,3 @@
 ---
-title: Frontend Greenlands
+title: Into the Frontend
 ---

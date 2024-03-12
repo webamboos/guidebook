@@ -1,3 +1,3 @@
 ---
-title: Journey into the Backend
+title: Into the Backend
 ---
