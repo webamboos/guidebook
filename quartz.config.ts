@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "guidebook.webamboos.com",
+    // baseUrl: "guidebook.webamboos.com",
     ignorePatterns: ["private", "templates", ".obsidian", "docs"],
     defaultDateType: "modified",
     theme: {
