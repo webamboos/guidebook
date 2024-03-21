@@ -60,14 +60,18 @@ This setup is usually used with servers as well. Typically there is one server t
 
 Similar to how a school has a single address but multiple entrances, a server has an IP and can send and receive requests on a `port`. This can more easily be explained using an example.
 
-Let's say you are hosting a website that can be access at the [URL](/fundamentals/the-url) `http://mywebsite.com`. The two most important components of this URL are the protocol (`http:`) and the domain name (`mywebsite.com`). To access the website, the domain name must point an A record towards the server your website is hosted on, and your server must be able to accept connections over the `http` protocol. By convention, HTTP requests use the port 80 for communcation, so the packets sent to request the website contents would be sent to `3.87.9.125:80`. Other protocols use other ports. For instance, `https` uses port 443, email servers typically use a combination of 25, 587 or 465. Of course, no one stops you if you want to use other ports, but common protocols use established, well-known ports to be able to communicate effectively and reliably.
+Let's say you are hosting a website that can be access at the [URL](/fundamentals/the-url) `http://mywebsite.com`. The two most important components of this URL are the protocol (`http:`) and the domain name (`mywebsite.com`). To access the website, the domain name must point an A record towards the server your website is hosted on, and your server must be able to accept connections over the `http` protocol. By convention, HTTP requests use the port 80 for communcation, so the packets sent to request the website contents would be sent to `3.87.9.125:80`. Other protocols use other ports. For instance, `https` uses port 443, email servers typically use a combination of 25, 587 or 465.
+
+Of course, no one stops you if you want to use other ports, but common protocols use established, well-known ports to be able to communicate effectively and reliably. If this doesn't make much sense yet, we'll discuss more about ports when we get to actually building an app.
 
 ## Protocols
 
+Protocols are a set of rules for communication between participants in a network. These are most often well known, set by different organisations, through the use of [RFCs](https://www.ietf.org/standards/rfcs/) (Request For Comments). You'll work with all kinds of protocols in your day to day, and the most common, on top of which everything else is built, are TCP and IP.
 
-
-### TCP/IP
-
-
+> [!tip] Your first RFC
+>
+> Reading an RFC is an interesting exercise. If you want to get even more familiar with how the internet works, and why it works, you should at least try reading some RFCs. You can start with the mother of them all, the [Internet Protocol RFC 791](https://datatracker.ietf.org/doc/html/rfc791).
 
 ### HTTP/S
+
+This is the protocol you're probably most familiar with: HTTP or [Hypertext Transfer Protocol](https://datatracker.ietf.org/doc/html/rfc2616). This is the language of the browsers, everytime you see a URL that starts with `http` or `https` (where `s` stands for secure), you can be sure the communication uses the HTTP protocol. Of course, this is just a convention, when you'll be building your own server applications you can use a custom protocol for communication that behind the scene also uses HTTP, noone is stopping you, but following standards is recommened.
