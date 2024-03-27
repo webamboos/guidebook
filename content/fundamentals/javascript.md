@@ -4,11 +4,11 @@ title: JavaScript
 
 JavaScript (formally known as [ECMAScript](https://262.ecma-international.org/14.0/)) is the programming language of the web. While the browser is mostly capable of handling all kinds of use-cases and scenarios, the default user experience is often lacking and users always want the best UX possible. That's where JavaScript comes in.
 
-JavaScript was initially designed to bring interactivity to the web, specifically in the **browser/client** (this is an important term). Nowadays, JavaScript can also be used on the **server** (again, important) through [NodeJS](/backend/nodejs) (put down your pitchforks, we know, there are others like [Bun](https://bun.sh/), [Deno](https://deno.com/), [WinterJS](https://github.com/bellard/quickjs), who can count them all? Node is still the most popular).
+JavaScript was initially designed to bring interactivity to the web, specifically in the **browser/client** (this is an important term). Nowadays, JavaScript can also be used on the **server** (again, important) through [Node.js](/backend/nodejs) (put down your pitchforks, we know, there are others like [Bun](https://bun.sh/), [Deno](https://deno.com/), [WinterJS](https://github.com/bellard/quickjs), who can count them all? Node is still the most popular).
 
 > [!warning] Server and Browser Javascript
 >
-> It's important to be aware of the differences between browser and server JavaScript. For example, the browser does not have access to the file system or to the USB ports of your computer, while NodeJS has. There are libraries that work on either the server, the browser, or sometimes both, depending on what they need to do. Still, you'll want to keep this piece of information in mind.
+> It's important to be aware of the differences between browser and server JavaScript. For example, the browser does not have access to the file system or to the USB ports of your computer, while Node.js has. There are libraries that work on either the server, the browser, or sometimes both, depending on what they need to do. Still, you'll want to keep this piece of information in mind.
 
 ## Running JavaScript in the browser
 
@@ -44,7 +44,7 @@ You can run any JavaScript there, one command at a time. The Console is a useful
 
 ## Running JavaScript on the server
 
-After you have installed [NodeJS](/backend/nodejs), you can run server-side JavaScript either by creating a `.js` script file that contains your code, or through the REPL.
+After you have installed [Node.js](/backend/nodejs), you can run server-side JavaScript either by creating a `.js` script file that contains your code, or through the REPL.
 
 ### REPL
 
@@ -58,7 +58,7 @@ Type ".help" for more information.
 > 
 ```
 
-Now you can type any NodeJS command and hit <kbd>Enter</kbd> to execute it. To exit the REPL you can write `.exit` or hit <kbd>Ctrl/Cmd + C</kbd> twice.
+Now you can type any Node.js command and hit <kbd>Enter</kbd> to execute it. To exit the REPL you can write `.exit` or hit <kbd>Ctrl/Cmd + C</kbd> twice.
 
 > [!tip] Exercise!
 > 

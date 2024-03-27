@@ -1,14 +1,14 @@
 ---
-title: NodeJS
+title: Node.js
 ---
 
-From their website, [NodeJS](https://nodejs.org/en) is "a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts". In laymans terms, NodeJS is a way to run JavaScript outside of the browser.
+From their website, [Node.js](https://nodejs.org/en) is "a free, open-source, cross-platform JavaScript runtime environment that lets developers create servers, web apps, command line tools and scripts". In laymans terms, Node.js is a way to run JavaScript outside of the browser.
 
 ![The Node documentary](https://www.youtube.com/watch?v=LB8KwiiUGy0)
 
-## Installing NodeJS
+## Installing Node.js
 
-There are several ways to install NodeJS onto your system, but we'll focus on one in particular. Often times when you jump into another project you find yourself needing a different version of either Node, or of another dependency related to Node or package management. Updating Node is easy, but once you update it, you might find yourself in an uncomfortable position where another project breaks because of some changes in the new Node version.
+There are several ways to install Node.js onto your system, but we'll focus on one in particular. Often times when you jump into another project you find yourself needing a different version of either Node, or of another dependency related to Node or package management. Updating Node is easy, but once you update it, you might find yourself in an uncomfortable position where another project breaks because of some changes in the new Node version.
 
 ### nvm
 
@@ -45,9 +45,9 @@ You can also create other aliases, for example by project name, but that's up to
 
 ## What is an event?
 
-We won't go into too much detail of writing actual NodeJS code, you should follow other online courses for that, like [The Odin Project](https://www.theodinproject.com/), but we will however go into the fundamentals of how Node works. Once you understand the fundamentals, you will understand anything.
+We won't go into too much detail of writing actual Node.js code, you should follow other online courses for that, like [The Odin Project](https://www.theodinproject.com/), but we will however go into the fundamentals of how Node works. Once you understand the fundamentals, you will understand anything.
 
-NodeJS is an asynchronous, event-driven runtime. This will probably be harder to grasp at first, but in Node the code you write will not always run in the exact sequence you intended it to, but at *some point* in response to an event. Let's take the next piece of code as an example.
+Node.js is an asynchronous, event-driven runtime. This will probably be harder to grasp at first, but in Node the code you write will not always run in the exact sequence you intended it to, but at *some point* in response to an event. Let's take the next piece of code as an example.
 
 ```js
 console.log('1')
@@ -61,15 +61,15 @@ Intuition would suggest that the code above will print `1`, `2` and `3`, where `
 
 ### The Event Loop
 
-NodeJS is single-threaded by design. What that means is your code runs on only a single CPU thread, and each instruction is handled one after the other. "But wait", you might say, "then why isn't the code above executing as our intuition would say?". Padawan, that's where the [Event Loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick) comes in.
+Node.js is single-threaded by design. What that means is your code runs on only a single CPU thread, and each instruction is handled one after the other. "But wait", you might say, "then why isn't the code above executing as our intuition would say?". Padawan, that's where the [Event Loop](https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick) comes in.
 
-NodeJS is fast because it can offload I/O operations the operating system (specifically through [libuv](https://libuv.org/)). By doing so, NodeJS can spend time computing other things, such as receiving requests, computing some mathematics or parsing data.
+Node.js is fast because it can offload I/O operations the operating system (specifically through [libuv](https://libuv.org/)). By doing so, Node.js can spend time computing other things, such as receiving requests, computing some mathematics or parsing data.
 
 > [!tip] What are I/O operations?
 >
-> I/O stands for Input/Output. A lot of the operations you do on a day-to-day basis that can take time involve requests to other services or reading or writing files. These tasks can be handled by the operating system, which is much more efficient in utilizing your CPU's threads. Other programming languages, such as Java, let you manage threads and concurrency, while NodeJS leaves it to the operating system (that doesn't mean you can't spawn new threads in Node). There are advantages and disadvantages to both approaches.
+> I/O stands for Input/Output. A lot of the operations you do on a day-to-day basis that can take time involve requests to other services or reading or writing files. These tasks can be handled by the operating system, which is much more efficient in utilizing your CPU's threads. Other programming languages, such as Java, let you manage threads and concurrency, while Node.js leaves it to the operating system (that doesn't mean you can't spawn new threads in Node). There are advantages and disadvantages to both approaches.
 
-This "off-loading" process is done through an Event Loop. You should watch the following video to understand it better, but long-story-short, any **asynchronous** tasks (e.g. reading files) are queued up, and while these tasks are waiting to be completed, NodeJS can do other tasks. Once a file is read, NodeJS gets a notification about the status, and lets your code run again normally.
+This "off-loading" process is done through an Event Loop. You should watch the following video to understand it better, but long-story-short, any **asynchronous** tasks (e.g. reading files) are queued up, and while these tasks are waiting to be completed, Node.js can do other tasks. Once a file is read, Node.js gets a notification about the status, and lets your code run again normally.
 
 !(Video about The Event Loop)[https://www.youtube.com/watch?v=cCOL7MC4Pl0]
 
@@ -215,9 +215,12 @@ try {
 
 Hope you were able to follow up to here and you have a better understanding of how Node works. While this is just touching the surface, you will need to go deeper. That's why we'll give you some good resources to learn more, and some excercises to build your understanding.
 
-- [The NodeJS Docs](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) - Highly recommended
+- [The Node.js Docs](https://nodejs.org/en/learn/getting-started/introduction-to-nodejs) - Highly recommended
+- [Art of Node](https://github.com/max-mapper/art-of-node)
+- [Node.js Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 - [The Odin Project](https://www.theodinproject.com/)
 - [FreeCodeCamp](https://www.freecodecamp.org/)
+- [Awesome Node.js](https://github.com/sindresorhus/awesome-nodejs)
 
 
 ### Excercises
@@ -226,4 +229,4 @@ Hope you were able to follow up to here and you have a better understanding of h
 
 **A `wait()` function** - `setTimeout` does not actually stop the execution of your code, but what if you wanted to pause for 5 seconds? Try writing a promisified version of setTimeout but which actually waits for the timeout to finish before executing other code.
 
-**Event Emitters and Files** - Create a file that contains a random number on each line. Now write a script and using the `EventEmmiter` class in NodeJS create a simple event listener that can respond to two events `even` or `odd`.  Your script will read the file line by line and emits events based on the number read on that line. If the number is odd, you will emit an event called `odd`, otherwise you emit an event `even`. The `even` event listener will run the `wait()` function above for 1 second then log the number, while the `odd` listener will only log the number. You can use the [NodeJS documentation](https://nodejs.org/en/learn/asynchronous-work/the-nodejs-event-emitter) as a starting point.
+**Event Emitters and Files** - Create a file that contains a random number on each line. Now write a script and using the `EventEmmiter` class in Node.js create a simple event listener that can respond to two events `even` or `odd`.  Your script will read the file line by line and emits events based on the number read on that line. If the number is odd, you will emit an event called `odd`, otherwise you emit an event `even`. The `even` event listener will run the `wait()` function above for 1 second then log the number, while the `odd` listener will only log the number. You can use the [Node.js documentation](https://nodejs.org/en/learn/asynchronous-work/the-nodejs-event-emitter) as a starting point.
