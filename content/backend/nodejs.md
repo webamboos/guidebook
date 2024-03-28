@@ -222,7 +222,6 @@ Hope you were able to follow up to here and you have a better understanding of h
 - [FreeCodeCamp](https://www.freecodecamp.org/)
 - [Awesome Node.js](https://github.com/sindresorhus/awesome-nodejs)
 
-
 ### Excercises
 
 **Block the event loop** - Try building a program that intentionally blocks the event-loop. Write down why your code blocks the event loop. Provide an example of the same code that does not block the event loop.
