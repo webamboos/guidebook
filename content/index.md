@@ -19,3 +19,5 @@ Before delving into technical information, we'll first visit the [the Mindset](/
 In the second chapter of the Guidebook you'll jump into the [Fundamentals](/fundamentals/the-web). Everything is interconnected (also why we chose to show you the nice graph on the side), having a good grasp of the fundamentals will allow you to go way beyond just the basics. Understanding the building blocks will show you how simple the web actually is.
 
 Chapter three introduces the first actual technical challenges, and we'll start by building a simple [Backend](/backend/servers) server. This chapter will show you how to build a simple server, how to handle [requests](/backend/requests), [responses](/backend/requests#responses), connecting and using a [database](/backend/databases), and more.
+
+Todo.
