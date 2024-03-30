@@ -20,7 +20,7 @@ As you can see, an HTTP Request is just some text. The first line always contain
 
 A response is similar in structure:
 
-```
+```yml
 HTTP/1.1 200 OK
 Date: Mon, 23 May 2005 22:38:34 GMT
 Content-Type: text/html; charset=UTF-8
@@ -84,3 +84,5 @@ Responses can send an extra information that tells what happened. This informati
 - `300-399`: Indicating a [redirect](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#redirection_messages), these response headers will tell the client to make a new request to another resource which is indicated by through the `Location` header. You can use this status code when some content was moved to another URL, or during an authentication process such as OAuth. The most common redirection codes are `301`, `302`, `307` or `308`.
 - `400-499`: These are used to indicate an error that originates from [the client](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses). For example, you can return `400 Bad Request` when the client sends a number when a string was expected, `401 Unauthorized` when the user is not logged in, `403 Forbidden` when the user does not have enough permissions to view a resource, or `404 Not Found` when a resource does not exist.
 - `500-599`: When a [server encounters an unexpected](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#server_error_responses) error, you return a 5xx status code. For example, if the request is correct, but the server encounters an error due to a programming-related bug, then you must return `500 Internal Server Error`.
+
+Whenever you are building an API, it's very important to consider the status codes that you will be returning to the clients who consume the API. For instance, if your API returns an error with a 200 OK status code then you API is designed poorly. API's need to be consistent and predictable. Moreover, if your API is public, and other people outside of your organization is going to use the API, having good defaults will make their lives much easier. You can go one step further and build your API in such a way that errors guide the consumer towards fixing the cause of the error, making your life much easier in the long run because they won't need to contact you too often to ask questions or fix your API's problems.
