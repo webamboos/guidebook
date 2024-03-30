@@ -38,6 +38,44 @@ You can, of course, link as many JavaScript files as you want, and they will all
 
 ### The Browser Console
 
+A quick and easy way to run JavaScript is using the browser console. You can press <kbd>F12</kbd> on any web page or `Right Click + Inspect` and the [DevTools panel](/frontend/browser-devtools) will pop up. You will notice a few tabs at the top, the `Console` being what you are looking for.
+
+You can run any JavaScript there, one command at a time. The Console is a useful tool to debug issues in your page quickly. For example, you might be wondering why a button emits an event (or doesn't), so you can easily add temporary events, styles, elements, and so on. When you're dine, all changes will be gone when you refresh the page.
+
 ## Running JavaScript on the server
 
-<!-- reference nodejs installment, talk about REPL and running a script -->
+After you have installed [NodeJS](/backend/nodejs), you can run server-side JavaScript either by creating a `.js` script file that contains your code, or through the REPL.
+
+### REPL
+
+The REPL ([read-eval-print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)) is an interactive "shell", similar to the browser console, where you can execute code line by line.
+
+To access the Node REPL you just need to type `node` in your [terminal](/fundamentals/the-terminal). The output will look like:
+
+```sh
+Welcome to Node.js v20.11.1.
+Type ".help" for more information.
+> 
+```
+
+Now you can type any NodeJS command and hit <kbd>Enter</kbd> to execute it. To exit the REPL you can write `.exit` or hit <kbd>Ctrl/Cmd + C</kbd> twice.
+
+> [!tip] Exercise!
+> 
+> Try writing some text into a file using the REPL. Hint: you can use variables in the REPL just like you would use in a normal JavaScript program.
+
+### Writing scripts
+
+A JS script is just a text file that ends in `.js` (or `.mjs` or `.cjs` but you don't need to worry [about that](https://www.hoeser.dev/blog/2023-02-21-cjs-vs-esm/) for now). Once you have created a script file, you can run it using the `node` command in your terminal.
+
+```js
+// myscript.js
+
+console.log('Hello world')
+```
+
+To execute the above script you just need to run `node myscript.js`.
+
+> [!tip] Exercise!
+> 
+> Just like the previous excercise, try writing to a file using a script.
