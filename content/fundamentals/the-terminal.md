@@ -10,6 +10,8 @@ Most of the work we do on a day-to-day basis on a computer is through graphical 
 
 We call this "file" a `shell`. This `shell` is actually a process running on your computer, and each new `shell` starts a new process. You can have as many shells open as needed, they run in isolation so you can run command to navigate the file system or execute programs easily without[^1] affecting other shells.
 
+Command line applications are usually much more powerful than their GUI alternatives. For example, `ffmpeg` is the most powerful library for creating and manipulating video files, it's used even by YouTube, and all of it's features can be accessed from the terminal. You can even automate boring tasks, such as renaming files, sending a notification daily, and so on. You can learn more about [shell scripting](https://www.shellscript.sh/) at any time.
+
 ## Processes
 
 A shell is basically a process. You might be familiar with the Task Manager in Windows, so you can think of processes like each software program that is currently running. A process starts, and at some point it stops, either by itself or from an outside signal. The most common signal to stop a process is `SIGINT` (= interrupt), which is triggered by <kbd>Ctrl/Cmd + C</kbd>.
@@ -20,7 +22,6 @@ Every operating system has a way of storing some configuration in a space called
 
 ```sh
 NODE_ENV=production node app.js
-
 ```
 Or, you can do the same thing with 2 commands:
 
