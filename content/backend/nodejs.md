@@ -71,7 +71,7 @@ Node.js is fast because it can offload I/O operations the operating system (spec
 
 This "off-loading" process is done through an Event Loop. You should watch the following video to understand it better, but long-story-short, any **asynchronous** tasks (e.g. reading files) are queued up, and while these tasks are waiting to be completed, Node.js can do other tasks. Once a file is read, Node.js gets a notification about the status, and lets your code run again normally.
 
-!(Video about The Event Loop)[https://www.youtube.com/watch?v=cCOL7MC4Pl0]
+![Video about The Event Loop](https://www.youtube.com/watch?v=cCOL7MC4Pl0)
 
 ### Callbacks
 
