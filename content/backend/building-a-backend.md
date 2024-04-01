@@ -1,5 +1,5 @@
 ---
-title: Your first backend
+title: Building a Backend
 ---
 
 As part of the Guidebook, we will work on a small project. The project will first entail a complete backend service that will later be used on the frontend.
@@ -8,7 +8,7 @@ As part of the Guidebook, we will work on a small project. The project will firs
 
 Jimmy is looking to buy a home, however it's difficult to keep track of all the homes he wishes to see, good and bad points of each home, prices and so on. He noticed that his friends also had this problem at some point, so he decided that he wants to create a simple app where people can keep track of homes they are looking to buy.
 
-Your task is to build a simple backend service that will handle all server-side operations for the service. You will also need to [build a frontend](/frontend/first-frontend) for this service, so you can first build the backend, or build them both in parallel.
+Your task is to build a simple backend service that will handle all server-side operations for the service. You will also need to [build a frontend](/frontend/building-a-frontend) for this service, so you can first build the backend, or build them both in parallel.
 
 ## Requirements
 

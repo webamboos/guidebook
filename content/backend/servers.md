@@ -13,7 +13,7 @@ Most of the work you will be doing when working on the backend is related to ser
 Before we can start our first server, let's discuss more about [ports](/fundamentals/the-web#ports). Ports are like a door through which messages can pass. When you create a server, you need to allow it to receive and send messages, this is done through a process called **port binding**. But let's understand this better with an example:
 
 ```js
-// you'll see above how the `server` is actually created
+// you'll see below how the `server` is actually created
 server.listen(3000)
 ```
 
@@ -69,4 +69,4 @@ Try opening the specified URL in the browser. What do you see?
 
 ## Next steps
 
-Here we just touched to surface. You can now continue and learn about [Requests and Responses](/backend/requests). Once that is clear, you should learn what [REST API's](/backend/rest-api) are, how they work and how to structure your API's so they are easy to use, predictible and cosnsitent. Finally, you will start using a [Database](/backend/databases), which you will then use to build a full-fledged [server API](/backend/first-backend).
+Here we just touched to surface. You can now continue and learn about [Requests and Responses](/backend/requests). Once that is clear, you should learn what [REST API's](/backend/rest-api) are, how they work and how to structure your API's so they are easy to use, predictible and cosnsitent. Finally, you will start using a [Database](/backend/databases), which you will then use to build a full-fledged [server API](/backend/building-a-backend).
