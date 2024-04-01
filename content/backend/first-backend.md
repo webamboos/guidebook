@@ -62,3 +62,7 @@ When organizing your code, you can choose from different formats. A good approac
 ## Getting started
 
 Now that you have a general overview of what needs to be done, you can get started by creating a `git` repository in your local computer and start writing code!
+
+> [!tip] Take notes
+>
+> Make sure you take notes of the process! For example, write down what patterns you used an why, what database and why, what libraries, what external API, what was hard, what was easy, any gotchas or interesting errors. Note everything down! Later, you might start your own blog too.
