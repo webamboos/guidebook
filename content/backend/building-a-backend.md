@@ -61,7 +61,7 @@ When organizing your code, you can choose from different formats. A good approac
 
 ## Getting started
 
-Now that you have a general overview of what needs to be done, you can get started by creating a `git` repository in your local computer and start writing code!
+Now that you have a general overview of what needs to be done, you can get started by creating a `git` repository in your local computer and start writing code! A good approach when building applications with multiple components (i.e. separate backend and frontend) is to use [monorepos](/advanced/monorepos).
 
 > [!tip] Take notes
 >
